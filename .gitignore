@@ -1,0 +1,61 @@
+# Byte‑compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+.env/
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Type checkers
+.mypy_cache/
+.dmypy.json
+.pytype/
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Database files
+*.sqlite3
+
+# Dependency locks
+Pipfile.lock
+poetry.lock
+
+# Miscellaneous
+celerybeat-schedule
+instance/
