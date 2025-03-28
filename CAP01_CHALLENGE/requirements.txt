@@ -1,11 +1,7 @@
-# App core
+# Core
 fastapi==0.110.0
 uvicorn==0.29.0
 
-# Autenticación y seguridad
+# Seguridad
 PyJWT==2.8.0
-passlib[bcrypt]==1.7.4  # Incluye bcrypt sin tener que listarlo aparte
-
-# Testing
-pytest==8.0.2
-httpx==0.27.0
+passlib[bcrypt]==1.7.4

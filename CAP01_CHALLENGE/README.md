@@ -134,7 +134,13 @@ Se testean:
 
 ## 🧼 Formato del código
 
-El código está formateado y validado con [**Ruff**](https://docs.astral.sh/ruff/), una herramienta moderna y veloz para estilo de código, linting y ordenamiento de imports.
+El código está validado y formateado con [**Ruff**](https://docs.astral.sh/ruff/), una herramienta moderna y veloz para estilo de código, linting y ordenamiento de imports.
+
+Como Ruff no se integra como formateador en VS Code aún, el formato se aplica desde la terminal:
+
+```bash
+ruff format .
+```
 
 ## 🧑‍💻 Autor
 
