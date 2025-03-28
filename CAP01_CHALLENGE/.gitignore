@@ -1,61 +1,83 @@
-# Byte‑compiled / optimized / DLL files
+# ====================
+# Compiled Python files
+# ====================
 __pycache__/
 *.py[cod]
 *$py.class
 
-# C extensions
-*.so
+# ====================
+# Virtual environments
+# ====================
+venv/
+.venv/
+env/
+ENV/
+.env/
 
-# Distribution / packaging
+# ====================
+# Editor config
+# ====================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ====================
+# Packaging / Build
+# ====================
 build/
 dist/
 *.egg-info/
 *.egg
 *.whl
 
-# Installer logs
+# ====================
+# Logs & Misc
+# ====================
 pip-log.txt
 pip-delete-this-directory.txt
+celerybeat-schedule
+instance/
 
-# Virtual environments
-env/
-venv/
-ENV/
-.venv/
-.env/
-
-# IDE/editor folders
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# Testing
+# ====================
+# Test-related
+# ====================
 .coverage
 coverage.xml
 htmlcov/
 .tox/
 .pytest_cache/
 
+# ====================
 # Type checkers
+# ====================
 .mypy_cache/
 .dmypy.json
 .pytype/
 
-# Jupyter notebooks
-.ipynb_checkpoints
+# ====================
+# Ruff
+# ====================
+ruff_cache/
 
-# OS files
+# ====================
+# OS-specific
+# ====================
 .DS_Store
 Thumbs.db
 
-# Database files
+# ====================
+# Notebooks
+# ====================
+.ipynb_checkpoints
+
+# ====================
+# DB (local dev only)
+# ====================
 *.sqlite3
 
-# Dependency locks
+# ====================
+# Dependency manager
+# ====================
 Pipfile.lock
 poetry.lock
-
-# Miscellaneous
-celerybeat-schedule
-instance/

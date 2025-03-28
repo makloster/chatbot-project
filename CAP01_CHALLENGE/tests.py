@@ -31,9 +31,9 @@ def test_register_existing_user():
             "password": "newpass",
         },
     )
-    assert (
-        response.status_code == 400
-    ), "No se devolvió un 400 al intentar registrar usuario existente"
+    assert response.status_code == 400, (
+        "No se devolvió un 400 al intentar registrar usuario existente"
+    )
 
 
 def test_login_existing_user():
@@ -216,6 +216,6 @@ def test_binary_search_unauthorized():
             "target": 3,
         },
     )
-    assert (
-        response.status_code == 401
-    ), "Unauthorized access did not return the expected HTTP 401 status code"
+    assert response.status_code == 401, (
+        "Unauthorized access did not return the expected HTTP 401 status code"
+    )
