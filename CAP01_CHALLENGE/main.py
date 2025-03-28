@@ -155,6 +155,26 @@ async def binary_search_endpoint(
     return {"found": found, "index": index}
 
 
+@app.post("/merge-sort")
+async def merge_sort_endpoint(payload: Payload, username: str = Depends(get_current_user)):
+    sorted_numbers = merge_sort(payload.numbers)
+    return {"numbers": sorted_numbers}
+
+
+@app.post("/min-value")
+async def min_value(payload: Payload, username: str = Depends(get_current_user)):
+    if not payload.numbers:
+        raise HTTPException(status_code=400, detail="La lista no puede estar vacía.")
+    return {"min": find_min(payload.numbers)}
+
+
+@app.post("/mean-median")
+async def mean_median(payload: Payload, username: str = Depends(get_current_user)):
+    if not payload.numbers:
+        raise HTTPException(status_code=400, detail="La lista no puede estar vacía.")
+    return calculate_mean_median(payload.numbers)
+
+
 # ===================
 # 🔧 Algoritmos útiles
 # ===================
@@ -180,3 +200,48 @@ def binary_search(arr: List[int], target: int) -> (bool, int):
         else:
             right = mid - 1
     return False, -1
+
+def merge_sort(arr: List[int]) -> List[int]:
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    return merge(left, right)
+
+def merge(left: List[int], right: List[int]) -> List[int]:
+    result = []
+    i = j = 0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+
+
+def find_min(arr: List[int]) -> int:
+    if not arr:
+        raise ValueError("La lista está vacía")
+    min_val = arr[0]
+    for num in arr[1:]:
+        if num < min_val:
+            min_val = num
+    return min_val
+
+
+def calculate_mean_median(arr: List[int]) -> dict:
+    if not arr:
+        raise ValueError("La lista está vacía")
+    n = len(arr)
+    sorted_arr = bubble_sort(arr[:])
+    mean = sum(arr) / n
+    if n % 2 == 0:
+        median = (sorted_arr[n // 2 - 1] + sorted_arr[n // 2]) / 2
+    else:
+        median = sorted_arr[n // 2]
+    return {"mean": mean, "median": median}

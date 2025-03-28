@@ -1,6 +1,6 @@
 # 🔐 FastAPI Challenge – API de Algoritmos Protegida con JWT
 
-Este proyecto fue desarrollado como parte del **CAP01_CHALLENGE** de Henry, con el objetivo de demostrar cómo un copiloto de código asistido por IA puede ayudar a construir una API funcional y segura desde cero, utilizando herramientas modernas del ecosistema Python. Las consignas para el Challenge se encuentra en el documento "README_consignas.md"
+Este proyecto fue desarrollado como parte del **CAP01_CHALLENGE** de Henry, con el objetivo de demostrar cómo un copiloto de código asistido por IA puede ayudar a construir una API funcional y segura desde cero, utilizando herramientas modernas del ecosistema Python. Las consignas para el Challenge se encuentran en el documento `README_consignas.md`.
 
 El enfoque principal fue implementar una API que:
 
@@ -26,25 +26,25 @@ El enfoque principal fue implementar una API que:
 
 El desafío consistía en implementar:
 
-1. **5 Endpoints de Algoritmos**
+### 1. Endpoints de algoritmos
 
-   - Bubble Sort
-   - Filtro de Pares
-   - Suma de Elementos
-   - Máximo Valor
-   - Búsqueda Binaria
+- `/bubble-sort`: Ordena una lista usando Bubble Sort
+- `/filter-even`: Filtra números pares
+- `/sum-elements`: Calcula la suma total
+- `/max-value`: Devuelve el máximo valor
+- `/binary-search`: Busca un número en una lista ordenada
+- `/merge-sort`: Nuevo – ordena usando Merge Sort
+- `/min-value`: Nuevo – devuelve el número mínimo
+- `/mean-median`: Nuevo – calcula media y mediana
 
-2. **Autenticación con JWT**
+### 2. Autenticación con JWT
 
-   - Registro e inicio de sesión
-   - Acceso protegido con tokens JWT
+- Registro e inicio de sesión de usuarios
+- Protección de endpoints mediante `?token=...`
 
-3. **Cifrado seguro de contraseñas**
+### 3. Cifrado seguro de contraseñas
 
-   - Uso de `CryptContext` y `bcrypt` para hashing
-
-4. **Acceso a endpoints usando `?token=...`**
-   - Los endpoints protegidos requieren autenticación mediante parámetro de consulta
+- Contraseñas almacenadas con `passlib` y `bcrypt`
 
 ---
 
@@ -71,7 +71,7 @@ uvicorn main:app --reload
 
 ## 🔐 Autenticación
 
-### 1. Registro de usuario
+### Registro de usuario
 
 ```http
 POST /register
@@ -81,7 +81,7 @@ POST /register
 }
 ```
 
-### 2. Inicio de sesión
+### Inicio de sesión
 
 ```http
 POST /login
@@ -100,7 +100,7 @@ POST /login
 Todos los endpoints requieren un `token` como parámetro de consulta:
 
 ```http
-POST /bubble-sort?token=<access_token>
+POST /<endpoint>?token=<access_token>
 ```
 
 ### Ejemplo:
@@ -116,7 +116,7 @@ POST /sum-elements?token=eyJhbGciOiJIUzI1NiIsInR5cCI6...
 
 ## 🧪 Testing
 
-Los tests automatizados están definidos en `tests.py` y ya venían predeterminados por el equipo del curso.
+Los tests automatizados predeterminados por el equipo de Henry están definidos en `tests.py`.
 
 Para ejecutarlos:
 
@@ -128,7 +128,7 @@ Se testean:
 
 - Registro y login
 - Acceso válido e inválido a endpoints
-- Funcionalidad de algoritmos
+- Funcionalidad de todos los algoritmos
 
 ---
 
@@ -141,6 +141,8 @@ Como Ruff no se integra como formateador en VS Code aún, el formato se aplica d
 ```bash
 ruff format .
 ```
+
+---
 
 ## 🧑‍💻 Autor
 
