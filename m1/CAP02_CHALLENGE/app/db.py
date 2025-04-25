@@ -32,5 +32,11 @@ class FakeDB:
     def delete_task(self, task_id: int):
         self.tasks = [task for task in self.tasks if task.id != task_id]
 
+    def delete_all_tasks(db: Session):
+    """Delete all tasks from the database."""
+    deleted_count = db.query(Task).delete()
+    db.commit()
+    return deleted_count
+
 
 db = FakeDB()
