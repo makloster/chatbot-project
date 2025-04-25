@@ -66,3 +66,4 @@ node_modules
 .env
 playwright-report/
 test-results/
+README_HMWK.md
