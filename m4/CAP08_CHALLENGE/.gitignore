@@ -1,0 +1,69 @@
+# Compiled Python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+.env/
+
+# Editor config
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Packaging / Build
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# Logs & Misc
+pip-log.txt
+pip-delete-this-directory.txt
+celerybeat-schedule
+instance/
+
+# Test-related
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Type checkers
+.mypy_cache/
+.dmypy.json
+.pytype/
+
+# Ruff
+ruff_cache/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Notebooks
+.ipynb_checkpoints
+
+# DB (local dev only)
+*.sqlite3
+
+# Dependency manager
+Pipfile.lock
+poetry.lock
+
+# Python bytecode
+*.pyo
+*.pyd
+
+node_modules
+.env
+playwright-report/
+test-results/
+README_HMWK.md
