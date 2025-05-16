@@ -61,6 +61,8 @@ Ejemplo:
 
 El chatbot buscará contexto online, lo procesará y generará una respuesta en streaming, citando las fuentes.
 
+Para salir de la app, solo basta con escribir `salir`, `exit` o `quit` y enviar el mensaje, a lo que el chatbot responderá con un mensaje de despedida.
+
 ---
 
 ## 🧪 Pruebas
