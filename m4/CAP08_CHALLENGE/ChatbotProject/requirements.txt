@@ -1,0 +1,9 @@
+openai>=1.0.0
+requests
+beautifulsoup4
+lxml[html_clean]
+python-dotenv
+tqdm
+httpx
+pytest
+newspaper3k
